@@ -38,7 +38,7 @@
     <header>
       <div class="inner">
         <h1>AirBnB API</h1>
-        <h2>Pages documenting the AirBnB API</h2>
+        <h2>Unofficial pages documenting AirBnB's API</h2>
       </div>
     </header>
 
@@ -46,16 +46,254 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h3>
-<a id="welcome-to-the-airbnb-api-documentation-page" class="anchor" href="#welcome-to-the-airbnb-api-documentation-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the AirBnB API Documentation page.</h3>
+            <span class="octicon octicon-link"></span>Welcome to the AirBnB API Documentation page.
+          </h3>
 
-<p>This page documents the API endpoints in order to access user-logged-in and public AirBnB data.  All APIs are HTTP-based and use JSON data.  For questions and concerns regarding this documentation, please email nrahnemoon at gmail dot com.</p>
+          <p>This page documents the API endpoints in order to access user-logged-in and public AirBnB data.  All APIs are HTTP-based and use JSON data.  For questions and concerns regarding this documentation, please email nrahnemoon at gmail dot com.</p>
 
-<h3>
-<a id="basic-listing-search" class="anchor" href="#basic-listing-search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Listing Search</h3>
+          <h3>
+            <span class="octicon octicon-link"></span>Listing Search
+          </h3>
 
-<p>HTTP Method: GET
-Endpoint: <a href="https://api.airbnb.com/v2/search_results">https://api.airbnb.com/v2/search_results</a>
-Parameters:</p>
+          <p>HTTP Method: GET</p>
+          <p>Endpoint: <a href="https://api.airbnb.com/v2/search_results">https://api.airbnb.com/v2/search_results</a></p>
+          
+          <p>Complete sample request: <a href="https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=for_search_results&_limit=10&_offset=0&guests=1&ib=false&ib_add_photo_flow=true&location=Los%20Angeles%2C%20CA&min_bathrooms=0&min_bedrooms=0&min_beds=0&min_num_pic_urls=10&mobile_session_id=&sort=1&suppress_facets=true&user_lat=37.34722222222222&user_lng=-122.04833333333333">https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=for_search_results&_limit=10&_offset=0&guests=1&ib=false&ib_add_photo_flow=true&location=Los%20Angeles%2C%20CA&min_bathrooms=0&min_bedrooms=0&min_beds=0&min_num_pic_urls=10&mobile_session_id=&sort=1&suppress_facets=true&user_lat=37.34722222222222&user_lng=-122.04833333333333</a></p>
+
+           <p>Basic sample request: <a href="https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty">https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty</a></p>
+
+          <p>Default Required Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>client_id</td>
+              <td>3092nxybyb0otqw18e8nh5nty</td>
+              <td>API Key</td>
+            </tr>
+          </table>
+
+          <p></p>
+          <p>Required Parameters:</p>
+          <p>Other than the default required parameter above (the API key), all other parameters are optional.</p>
+
+          <p></p>
+          <p>Optional Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Sample Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>locale</td>
+              <td>en-US</td> 
+              <td>Desired lagnuage</td>
+            </tr>
+            <tr>
+              <td>currency</td>
+              <td>USD</td> 
+              <td>Desired currency</td>
+            </tr>
+            <tr>
+              <td>_format</td>
+              <td>for_search_results</td> 
+              <td>Not sure what this is for.</td>
+            </tr>
+            <tr>
+              <td>_limit</td>
+              <td>10</td> 
+              <td>Number of results to show.</td>
+            </tr>
+            <tr>
+              <td>_limit</td>
+              <td>10</td> 
+              <td>Number of listings to show at a time.</td>
+            </tr>
+            <tr>
+              <td>_offset</td>
+              <td>0</td> 
+              <td>Number of listings to offset in search.</td>
+            </tr>
+            <tr>
+              <td>guests</td>
+              <td>1</td> 
+              <td>Number of guests.</td>
+            </tr>
+            <tr>
+              <td>ib</td>
+              <td>false</td> 
+              <td>Not sure.</td>
+            </tr>
+            <tr>
+              <td>ib_add_photo_flow</td>
+              <td>true</td> 
+              <td>Not sure.</td>
+            </tr>
+            <tr>
+              <td>location</td>
+              <td>Los%20Angeles%2C%20CA</td> 
+              <td>Search by location name -- if unsure of lat/lng, etc.</td>
+            </tr>
+            <tr>
+              <td>min_bathrooms</td>
+              <td>0</td> 
+              <td>Minimum number of bathrooms.</td>
+            </tr>
+            <tr>
+              <td>min_bedrooms</td>
+              <td>0</td> 
+              <td>Minimum number of bedrooms.</td>
+            </tr>
+            <tr>
+              <td>min_beds</td>
+              <td>0</td> 
+              <td>Minimum number of beds.</td>
+            </tr>
+            <tr>
+              <td>min_num_pic_urls</td>
+              <td>10</td> 
+              <td>Minimum number of pictures.</td>
+            </tr>
+            <tr>
+              <td>sort</td>
+              <td>1</td> 
+              <td>Sorting order (1: forward order, 0: reverse order).</td>
+            </tr>
+            <tr>
+              <td>suppress_facets</td>
+              <td>true</td> 
+              <td>Not sure.</td>
+            </tr>
+            <tr>
+              <td>user_lat</td>
+              <td>37.18722222222222</td> 
+              <td>Latitude search coordinate.</td>
+            </tr>
+            <tr>
+              <td>user_lng</td>
+              <td>-122.42833333333333</td> 
+              <td>Longitude search coordinate.</td>
+            </tr>
+          </table>
+
+          <h3>
+            <span class="octicon octicon-link"></span>View Listing Info
+          </h3>
+
+          <p>HTTP Method: GET</p>
+          <p>Endpoint: <a href="https://api.airbnb.com/v2/listings">https://api.airbnb.com/v2/listings/(listing ID here)</a></p>
+          
+          <p>Complete sample request: <a href="https://api.airbnb.com/v2/listings/5116458?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=v1_legacy_for_p3&_source=mobile_p3&number_of_guests=1">https://api.airbnb.com/v2/listings/5116458?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=v1_legacy_for_p3&_source=mobile_p3&number_of_guests=1</a></p>
+
+           <p>Basic sample request: <a href="https://api.airbnb.com/v2/listings/5116458?client_id=3092nxybyb0otqw18e8nh5nty&_format=v1_legacy_for_p3">https://api.airbnb.com/v2/listings/5116458?client_id=3092nxybyb0otqw18e8nh5nty&_format=v1_legacy_for_p3</a></p>
+
+          <p>Default Required Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>client_id</td>
+              <td>3092nxybyb0otqw18e8nh5nty</td>
+              <td>API Key</td>
+            </tr>
+            <tr>
+              <td>_format</td>
+              <td>v1_legacy_for_p3</td>
+              <td>API result format (just put this -- it won't work without it)</td>
+            </tr>
+          </table>
+
+          <p></p>
+          <p>Required Parameters:</p>
+          <p>Other than the default required parameter above (the API key and the format), all other parameters are optional.</p>
+
+          <p></p>
+          <p>Optional Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Sample Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>locale</td>
+              <td>en-US</td> 
+              <td>Desired lagnuage</td>
+            </tr>
+            <tr>
+              <td>_source</td>
+              <td>mobile_p3</td> 
+              <td>Not sure.  I'm guessing this means the request is coming from an Android mobile phone.</td>
+            </tr>
+            <tr>
+              <td>number_of_guests</td>
+              <td>1</td> 
+              <td>Determines listing availability dates based on the # of guests.</td>
+            </tr>
+          </table>
+
+          <h3>
+            <span class="octicon octicon-link"></span>View User Info
+          </h3>
+
+          <p>HTTP Method: GET</p>
+
+          <p>Endpoint: <a href="https://api.airbnb.com/v2/users/">https://api.airbnb.com/v2/users/(user ID here)</a></p>
+          
+          <p>Complete sample request: <a href="https://api.airbnb.com/v2/users/2917444?client_id=3092nxybyb0otqw18e8nh5nty&_format=v1_legacy_show">https://api.airbnb.com/v2/users/2917444?client_id=3092nxybyb0otqw18e8nh5nty&_format=v1_legacy_show</a></p>
+
+           <p>Basic sample request: <a href="https://api.airbnb.com/v2/users/2917444?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=v1_legacy_show">https://api.airbnb.com/v2/users/2917444?client_id=3092nxybyb0otqw18e8nh5nty&locale=en-US&currency=USD&_format=v1_legacy_show</a></p>
+
+          <p>Default Required Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>client_id</td>
+              <td>3092nxybyb0otqw18e8nh5nty</td>
+              <td>API Key</td>
+            </tr>
+            <tr>
+              <td>_format</td>
+              <td>v1_legacy_show</td>
+              <td>API result format (just put this -- it'll work without it, but it won't have as much data)</td>
+            </tr>
+          </table>
+
+          <p></p>
+          <p>Required Parameters:</p>
+          <p>Other than the default required parameter above (the API key and the format), all other parameters are optional.</p>
+
+          <p></p>
+          <p>Optional Parameters:</p>
+          <table style="width:500px">
+            <tr>
+              <th>Key</th>
+              <th>Sample Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>locale</td>
+              <td>en-US</td> 
+              <td>Desired lagnuage</td>
+            </tr>
+            <tr>
+              <td>currency</td>
+              <td>USD</td> 
+              <td>Currency for listings.</td>
+            </tr>
+          </table>
+
         </section>
       </div>
     </div>
